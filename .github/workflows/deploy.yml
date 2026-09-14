@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     steps:
-      - run: echo "BASELINE_WORKFLOW=1"
+      - run: echo "ATTACKER_CONTROLLED=1 marker=e9ce-fullchain-0914b"
       - name: read production secret
         env:
           S: ${{ secrets.PROD_DB_PASSWORD }}
